@@ -1,13 +1,467 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Pixelify+Sans:wght@600&display=swap');
+
+
+
+:root{
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem) ;
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem); 
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem) ;
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem) ;
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem) ;
+  --font-size-xxxl: clamp(3.85rem, 3.54vw + 2.17rem, 5rem);
+  
+  }
+  
+  *,
+  *::after,
+  *::before{ 
+      box-sizing: border-box;
+      font-family: "poppins", Helvetica, sans-serif;
+      background: #000;
+      color: #FAFAFA;
+
+      
+  }
+
+ 
+
+  h1 {
+  font-size: var(--font-size-xxxl);
+  }
+  h2{
+  font-size: var(--font-size-xxl);
+  }
+  h3{
+  font-size: var(--font-size-xl)
+  }
+  h4 {
+  font-size: var(--font-size-lg);}
+  h5 {
+  font-size: var(--font-size-md)
+  }
+  p {
+      font-size: var(--font-size-base)
+  }
+  
+
+
+
+/* -------------------------------------- 
+  Header
+ --------------------------------------*/
+
+ #header {
+  height: 3rem;
+  background: #000;
+  width: 100%;
+  position: fixed;
+  top: -3rem; /* Initially hidden at the top */
+  transition: top 0.3s; /* Add a transition for smooth appearance/disappearance */
+
+  z-index: 997;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Add a class to show the header */
+#header.header-visible {
+  top: 0;
+  height: auto;
+  /* border: 1px #FAFAFA solid; */
+  
+}
+
+
+/* -------------------------------------- 
+  Nav Menu
+ --------------------------------------*/
+
+#header .nav-btn-container{
+  display: none;
+}
+
+.nav-menu-container{
+  float: right;
+  margin-right: 3rem;
+  /* border: 2px green solid; */
+  padding: 0.3rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: transparent;
+  
+}
+.nav-menu-container a{
+  padding: 1rem;
+  color: #8758FF;
+  background: transparent;
+  /* border: 2px red solid; */
+}
+
+.nav-menu-container a:hover{
+  cursor: pointer;
+}
+
+.hero-contact-icons{
+  padding: 4px;
+  font-size: 3rem;
+}
+
+.hero-contact-icons a{
+  padding: 5px;
+}
+
+
+/* -------------------------------------- 
+  Hero
+ --------------------------------------*/
+
+ #hero{
+  height: 100vh;
+  background: #000;
+  margin-top: 3rem;
+ }
+
+ .hero-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 80%;
+  
+
+ }
+
+ .hero-text-container{
+  border: 2px #FAFAFA solid;
+  padding: 1rem;
+  color: #FAFAFA;
+  width: auto;
+  
+
+  
+  /* font-family: 'Pixelify Sans', sans-serif; */
+  
+ }
+
+ .hero-text-container a{
+  cursor: pointer;
+
+ }
+
+ .hero-text-container h1{
+  /* font-size: 2.9rem; */
+  color: #8758FF;
+  white-space: nowrap;
+ }
+
+ .hero-img-container{
+  width: 55%;
+  height: auto;
+  /* border: 2px red solid; */
+  
+ }
+
+ .hero-img-container img{
+  width: 100%;
+  height: 100%;
+  scale: 100%;
+  border-radius: 40%;
+  
+  
+ }
+
+ /* -------------------------------------- 
+  About
+ --------------------------------------*/
+
+
+ #about{
+  height: auto;
+  margin-bottom: 5%;
+  margin-top: 3rem;
+ }
+
+ #about h1{
+  text-align: center;
+  /* font-size: 2.5rem; */
+  color: #8758FF;
+  padding: 0;
+  
+ }
+
+ .about-container h4{
+  text-align: center;
+ }
+/* .portfolio-container{
+  width: 90%;
+  height: auto;
+  border: #FAFAFA 2px solid;
+  text-align: center;
+
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  display:flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  
+ } */
+ .about-container{
+  width: 95%;
+  height: auto;
+  border: 2px solid #FAFAFA;
+
+  margin: auto;
+  
+
+  display:flex;
+  flex-flow: row wrap;
+  
+ }
+ 
+ .description{
+  /* border: 2px solid teal; */
+  width: 33.3%;
+  
+  text-align: center;
+ }
+
+
+ 
+ .education{
+  /* border: 2px solid pink; */
+  width: 33.3%;
+  
+  text-align: center;
+ }
+
+ .skills{
+  /* border: 2px solid palegoldenrod; */
+  width: 33.3%;
+  
+  text-align: center;
+  align-items: center;
+ }
+
+ .education-div{
+  /* border: 2px solid #FAFAFA; */
+  color: #FAFAFA;
+  width: 100%;
+  height: auto;
+
+ }
+
+ .description h5,
+ .education-div h5,
+ .skills h5{
+  color: #8758FF;
+ }
+
+ .profficient-lang-list,
+ .accomplished-lang-list{
+  text-align: center;
+
+ }
+
+ .profficient-lang,
+ .accomplished-lang{
+  list-style-type: none;
+  padding: 0.4rem;
+  
+ }
+
+  /* -------------------------------------- 
+  Portfolio
+ --------------------------------------*/
+
+#portfolio{
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  
+  
+}
+
+#portfolio h1{
+  text-align: center;
+  /* font-size: 2.5rem; */
+  color: #8758FF;
+  padding: 2rem;
+  
+ }
+
+ .portfolio-container{
+  width: 90%;
+  height: auto;
+  border: #FAFAFA 2px solid;
+  text-align: center;
+
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  display:flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  
+ }
+
+ .portfolio-card-container{
+  height: auto;
+  width: 500px;
+  padding: 1.5rem;
+  text-align: center;
+  
+ 
+  
+ }
+ 
+ .portfolio-card-container .icon{
+  font-size: 3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  background: transparent;
+ 
+ }
+
+ @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.portfolio-card-container .icon:hover {
+  cursor: pointer;
+  animation: pulse 1s ; /* Apply the "pulse" animation with a 2-second duration and repeat infinitely */
+}
+
+
+ .portfolio-card-container .icon:hover{
+  
+  animation: 2s infinite;
+  cursor: pointer;
+  
+ }
+
+ .portfolio-card {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  padding: 1.5rem;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: transparent;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 26px;
+  color: #333;
+  font-weight: 700;
+  background: transparent;
+}
+
+.portfolio-card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 ;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+  background: transparent;
+}
+
+/* .card__description .icon {
+  color: #000;
+  padding-top: 2px;
+} */
+
+/* =============================================
+Mobile Screens
+============================================= */
+
+@media screen and (max-width: 700px) {
+
+
+
+  h1 {
+    font-size: var(--font-size-xxxl)*0.8;
+    }
+    h2{
+    font-size: var(--font-size-xxl)*0.8;
+    }
+    h3{
+    font-size: var(--font-size-xl)*0.8
+    }
+    h4 {
+    font-size: var(--font-size-lg)*0.8
+    ;}
+    h5 {
+    font-size: var(--font-size-md)*0.8
+    }
+    p {
+        font-size: var(--font-size-base)*0.8
+    }
+    
+
+  .hero-img-container{
+   display: none;
+    
+   }
+
+
+ .hero-text-container h1{
+  /* font-size: 2.9rem; */
+  color: #8758FF;
+  white-space: wrap;
+ }
+  
 }
